@@ -1,0 +1,5 @@
+C:/Users/carlo/Desktop/Uni/Cuarto ano/Moviles/UnityAndroidGame/.utmp/RelWithDebInfo/493d692x/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/carlo/Desktop/Uni/Cuarto ano/Moviles/UnityAndroidGame/.utmp/RelWithDebInfo/493d692x/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/carlo/Desktop/Uni/Cuarto ano/Moviles/UnityAndroidGame/.utmp/RelWithDebInfo/493d692x/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/carlo/Desktop/Uni/Cuarto ano/Moviles/UnityAndroidGame/.utmp/RelWithDebInfo/493d692x/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/carlo/Desktop/Uni/Cuarto ano/Moviles/UnityAndroidGame/.utmp/RelWithDebInfo/493d692x/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
