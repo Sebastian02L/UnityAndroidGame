@@ -807,7 +807,6 @@ GameObject:
   - component: {fileID: 487219373}
   - component: {fileID: 487219372}
   - component: {fileID: 487219371}
-  - component: {fileID: 487219370}
   m_Layer: 0
   m_Name: SpawnArea
   m_TagString: Untagged
@@ -840,19 +839,6 @@ Transform:
   - {fileID: 1024031084}
   m_Father: {fileID: 2039560972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &487219370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487219368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6876a775ab6d894699291f8a4c5ab10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 20
 --- !u!65 &487219371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1437,6 +1423,8 @@ MonoBehaviour:
   UI: {fileID: 566394742}
   groupGO: {fileID: 2039560971}
   startingPosition: {fileID: 1612247154}
+  spawnAreaDistance: 25
+  spawnArea: {fileID: 487219368}
   spawnPoints:
   - {fileID: 1741659723}
   - {fileID: 2020937781}
@@ -1448,9 +1436,12 @@ MonoBehaviour:
   - {fileID: 2023414380}
   - {fileID: 1460209580}
   - {fileID: 1024031083}
-  spawnInterval: 1
+  spawnInterval: 2
   minFreeSpawnPoints: 5
   maxFreeSpawnPoints: 7
+  distanceGoalInterval: 50
+  nextGoal: 0
+  speedPorcentageIncrement: 0.1
   playerSpeed: 4.6
 --- !u!4 &846357711
 Transform:
