@@ -10,7 +10,7 @@ public class PruebaCubo : MonoBehaviour
     {
         transform.Rotate(Vector3.one * rotationSpeed * Time.deltaTime);
 
-        if (arHumanBodyManager != null && arHumanBodyManager.subsystem != null && arHumanBodyManager.subsystem.running)
+        if (arHumanBodyManager.subsystem != null && arHumanBodyManager.subsystem.running)
         {
             GetComponent<Renderer>().material.color = Color.green;
         }

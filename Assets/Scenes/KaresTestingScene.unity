@@ -202,11 +202,11 @@ Transform:
   m_GameObject: {fileID: 108516877}
   serializedVersion: 2
   m_LocalRotation: {x: -0.17215405, y: -0, z: -0, w: 0.98507005}
-  m_LocalPosition: {x: 0, y: 1.019, z: 6.809}
+  m_LocalPosition: {x: -1.8614239, y: 1.0297905, z: 4.2075047}
   m_LocalScale: {x: 1.2449, y: 0.52011, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 886287379}
   m_LocalEulerAnglesHint: {x: -19.826, y: 0, z: 0}
 --- !u!114 &108516882
 MonoBehaviour:
@@ -221,8 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseMovementSpeed: 10
-  _speedRotationInfluence: 1.5
   _rotationSpeed: 50
+  _speedRotationInfluence: 1.5
+  _maxRotation: 45
   _boundsDistance: 3
   _deadZoneValue: 5
 --- !u!65 &108516883
@@ -403,12 +404,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487060824}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 2.28, z: 2.6014953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.7514238, y: 2.2907903, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 886287379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886287378
 GameObject:
@@ -425,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &886287379
 Transform:
   m_ObjectHideFlags: 0
@@ -438,7 +439,9 @@ Transform:
   m_LocalPosition: {x: 1.8614239, y: -0.010790436, z: 2.6014953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 108516881}
+  - {fileID: 487060828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903752955
@@ -458,7 +461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &903752956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1463793749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1046,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1661909455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,19 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1463793752}
-        m_TargetAssemblyTypeName: PruebaCubo, Assembly-CSharp
-        m_MethodName: ToggleVisibility
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Pose2D: 1
   m_Pose3D: 1
   m_Pose3DScaleEstimation: 1
@@ -1152,5 +1143,3 @@ SceneRoots:
   - {fileID: 903752958}
   - {fileID: 1463793751}
   - {fileID: 886287379}
-  - {fileID: 108516881}
-  - {fileID: 487060828}
