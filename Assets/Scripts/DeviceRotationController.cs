@@ -20,10 +20,15 @@ public class DeviceRotationController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        //Los dispositivos Android de base tienen el giroscopio desactivado
+        Input.gyro.enabled = true;
+    }
+
     void Update() //Aquí se calcula la rotación
     {
-        //Algunos dispositivos por defecto no tienen el giroscopio habilitado de base
-        if (!Input.gyro.enabled) Input.gyro.enabled = true; //Si lo ponemos en el Start a veces da error y no lo activa, así que de momento se queda aquí
+        if (!Input.gyro.enabled) return;
         //_rotationZ suma a sí misma la rotación del dispositivo en el eje Z y controla que el personaje no gire demasiado
         _rotationZ += Input.gyro.rotationRateUnbiased.z * _rotationSpeed * Time.deltaTime;
         _rotationZ = Mathf.Clamp(_rotationZ, -_maxRotation, _maxRotation);
