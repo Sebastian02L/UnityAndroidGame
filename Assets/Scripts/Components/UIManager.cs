@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
     //Elementos de la interfaz
     [SerializeField] TextMeshProUGUI countDownText;
     [SerializeField] TextMeshProUGUI distanceText;
+    [SerializeField] TextMeshProUGUI endGameText;
 
     void Start()
     {
@@ -33,5 +34,11 @@ public class UIManager : MonoBehaviour
     public void UpdateDistance(string distance) 
     {
         distanceText.text = "Distancia: " + distance + "m";
+    }
+
+    public void EnableEndGameText(string distance)
+    {
+        endGameText.text = "Has recorrido " + distance + "m";
+        distanceText.gameObject.SetActive(false);
     }
 }

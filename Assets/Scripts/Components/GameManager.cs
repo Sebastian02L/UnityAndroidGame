@@ -8,21 +8,26 @@ public class GameManager : MonoBehaviour
 {
     //Referencia a GameObjects de la escena, concretamente al UIManager, al grupo de objetos y el punto de salida del jugador
     [SerializeField] UIManager UI;
-    [SerializeField] GameObject groupGO; 
+    [SerializeField] GameObject groupGO; //Area de spawn y jugador
     [SerializeField] GameObject startingPosition;
 
+    //Distancia de la zona de aparicion respecto al jugador y variables necesarias
     [Header("Configuración de la Zona de Aparicion")]
-    [SerializeField] private float spawnAreaDistance;
-    [SerializeField] GameObject spawnArea;
-    private float previousDistance;
+    [SerializeField] private float spawnAreaDistance; 
+    [SerializeField] GameObject spawnArea; 
+    float baseSpawnAreaDistance; 
+    private float previousDistance; 
 
-    [SerializeField] List<GameObject> spawnPoints;
-    [SerializeField] float spawnInterval;
-    float spawnTimer = 0f;
+    //Puntos de aparicion de los objetos y el intervalo de aparicion
+    [SerializeField] List<GameObject> spawnPoints; 
+    [SerializeField] float spawnInterval; 
+    float spawnTimer = 0f; 
 
+    //Numero minimo y maximo de puntos de aparicion libres, cambiando cada vez que aumente la dificultad
     [SerializeField] int minFreeSpawnPoints;
     [SerializeField] int maxFreeSpawnPoints;
 
+    //Listas para almacenar los puntos libres de aparicion y recordar los puntos libres de la ronda anterior para darle prioridad a los puntos que no estaban libres
     List<int> actualFreePoints = new List<int>();
     List<int> latestFreePoints = new List<int>();
 
@@ -30,9 +35,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] float distanceGoalInterval; //Cada x metros aumenta la dificultad
     [SerializeField] float nextGoal;
     [SerializeField] float speedPorcentageIncrement; //Porcentaje de incremento de la velocidad del jugador
-    float baseSpeed; //Velocidad base del jugador, se utiliza para aumentar siempre la misma cantidad en la velocidad y la distancia de spawn
+    float baseSpeed; //Velocidad base del jugador, se utiliza para aumentar siempre la misma cantidad en la velocidad 
 
-    //Velocidad del jugador
+    //Datos del jugador
     [SerializeField] float playerSpeed;
     float totalPlayerDistance;
 
@@ -53,6 +58,7 @@ public class GameManager : MonoBehaviour
         //Inicializamos la primera meta y la velocidad base
         nextGoal = distanceGoalInterval;
         baseSpeed = playerSpeed;
+        baseSpawnAreaDistance = spawnAreaDistance;
     }
 
     void Start()
@@ -73,6 +79,14 @@ public class GameManager : MonoBehaviour
         UI.HideCountdown();
 
         gameStarted = true;
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("Game Over");
+        gameStarted = false;
+        UI.EnableEndGameText(totalPlayerDistance.ToString("F0"));
+        Time.timeScale = 0f;
     }
 
     void Update()
@@ -182,8 +196,9 @@ public class GameManager : MonoBehaviour
             if(!actualFreePoints.Contains(i))
             {
                 GameObject GObject = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), spawnPoints[i].transform.position, Quaternion.identity);
+                GObject.AddComponent<BoxCollider>();
                 GObject.transform.SetParent(null);
-                Destroy(GObject.gameObject, 5f);
+                Destroy(GObject.gameObject, 10f);
             }
         }
     }
@@ -201,7 +216,7 @@ public class GameManager : MonoBehaviour
         {
             nextGoal += distanceGoalInterval;
             playerSpeed += baseSpeed * speedPorcentageIncrement;
-            spawnAreaDistance += baseSpeed * speedPorcentageIncrement;
+            spawnAreaDistance += baseSpawnAreaDistance * speedPorcentageIncrement;
 
             if (minFreeSpawnPoints > 1) minFreeSpawnPoints--;
             if (maxFreeSpawnPoints > 1) maxFreeSpawnPoints--;
