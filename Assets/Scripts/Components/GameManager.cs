@@ -91,10 +91,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (!gameStarted) return;
+
         UpdateSpawnAreaDistance();
         UpdateDifficulty();
-
-        if (!gameStarted) return;
 
         //Gestion de la partida
 

@@ -8,16 +8,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI distanceText;
     [SerializeField] TextMeshProUGUI endGameText;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     //Metodo para actualizar el texto de la cuenta atras del inicio de la partida
     public void UpdateCountdown(string value)
     {
