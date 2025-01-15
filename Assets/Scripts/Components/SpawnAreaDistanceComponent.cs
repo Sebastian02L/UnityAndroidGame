@@ -32,6 +32,6 @@ public class SpawnAreaDistanceComponent : MonoBehaviour
 
         //Comprobamos que haya desplazado correctamente la zona
         Vector3 distanceBetween = GameObject.FindWithTag("Player").transform.position - transform.position;
-        Debug.Log("Distance: " + distanceBetween.magnitude);
+        //Debug.Log("Distance: " + distanceBetween.magnitude);
     }
 }

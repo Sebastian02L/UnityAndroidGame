@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 36564e4e31d953642a19ad13d642a4dd
+  - enabled: 1
     path: Assets/Scenes/KaresTestingScene.unity
     guid: da4f9991bfe06cf4287a967c2908cb71
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/GyroscopeMode.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 27d1ab24a6302194998bd4f6d3ea0766, type: 2}

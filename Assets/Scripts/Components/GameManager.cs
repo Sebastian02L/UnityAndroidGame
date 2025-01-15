@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using NUnit.Framework;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -53,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         //Comprobamos que haya desplazado correctamente la zona
         Vector3 distanceBetween = GameObject.FindWithTag("Player").transform.position - spawnArea.transform.position;
-        Debug.Log("Distance: " + distanceBetween.magnitude);
+        //Debug.Log("Distance: " + distanceBetween.magnitude);
 
         //Inicializamos la primera meta y la velocidad base
         nextGoal = distanceGoalInterval;
@@ -83,9 +81,9 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        Debug.Log("Game Over");
+        //Debug.Log("Game Over");
         gameStarted = false;
-        UI.EnableEndGameText(totalPlayerDistance.ToString("F0"));
+        UI.ShowResultsScreen(totalPlayerDistance.ToString("F0"));
         Time.timeScale = 0f;
     }
 
@@ -136,7 +134,7 @@ public class GameManager : MonoBehaviour
 
         //Comprobamos que haya desplazado correctamente la zona
         Vector3 distanceBetween = GameObject.FindWithTag("Player").transform.position - spawnArea.transform.position;
-        Debug.Log("Distance: " + distanceBetween.magnitude);
+        //Debug.Log("Distance: " + distanceBetween.magnitude);
     }
 
     //Metodo que mueve al grupo de objetos en conjunto (jugador y area de spawn)
@@ -222,5 +220,11 @@ public class GameManager : MonoBehaviour
             if (maxFreeSpawnPoints > 1) maxFreeSpawnPoints--;
             if (spawnInterval > 0.5f) spawnInterval -= 0.05f;
         }
+    }
+
+    //Metodo para pausar el juego
+    public void PauseGame(bool value)
+    {
+        Time.timeScale = value ? 0f : 1f;
     }
 }
