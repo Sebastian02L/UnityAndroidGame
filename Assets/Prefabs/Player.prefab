@@ -66,7 +66,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 30a46907222aba345a22e9e92fb3f159, type: 2}
-  - {fileID: 2100000, guid: 500a26022bdb62c4a8fa665647e0bdfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +102,6 @@ MonoBehaviour:
   _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
   _colorMult: {r: 1, g: 1, b: 1, a: 1}
   _usesColorMult: 0
-  _outlineScale: 1.02
 --- !u!1 &5521648121293238105
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +270,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 30a46907222aba345a22e9e92fb3f159, type: 2}
-  - {fileID: 2100000, guid: 500a26022bdb62c4a8fa665647e0bdfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -309,4 +306,3 @@ MonoBehaviour:
   _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
   _colorMult: {r: 1, g: 1, b: 1, a: 1}
   _usesColorMult: 0
-  _outlineScale: 1.02

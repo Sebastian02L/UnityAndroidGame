@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6c35f7c3e6b2a854b9517cdaf6c1e706, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 6c35f7c3e6b2a854b9517cdaf6c1e706, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -95,7 +95,6 @@ MonoBehaviour:
   _texture: {fileID: 2800000, guid: c17100f3a9ad9a141863eb83de96032d, type: 3}
   _colorMult: {r: 0, g: 0, b: 0, a: 0}
   _usesColorMult: 0
-  _outlineScale: 1.01
 --- !u!65 &2208996288795369672
 BoxCollider:
   m_ObjectHideFlags: 0
