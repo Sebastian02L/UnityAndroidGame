@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     //Distancia de la zona de aparicion respecto al jugador y variables necesarias
     [Header("Configuración de la Zona de Aparicion")]
     [SerializeField] private float spawnAreaDistance; 
-    [SerializeField] GameObject spawnArea; 
+    [SerializeField] GameObject spawnArea;
+    [SerializeField] List<GameObject> obstaclePrefabs;
     float baseSpawnAreaDistance; 
     private float previousDistance; 
 
@@ -193,10 +194,14 @@ public class GameManager : MonoBehaviour
         {
             if(!actualFreePoints.Contains(i))
             {
-                GameObject GObject = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), spawnPoints[i].transform.position, Quaternion.identity);
-                GObject.AddComponent<BoxCollider>();
-                GObject.transform.SetParent(null);
-                Destroy(GObject.gameObject, 10f);
+                //GameObject GObject = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), spawnPoints[i].transform.position, Quaternion.identity);
+                //GObject.AddComponent<BoxCollider>();
+                //GObject.transform.SetParent(null);
+                //Destroy(GObject.gameObject, 10f);
+
+                //Escoge de forma aleatoria un obstaculo de la lista y lo instancia en el punto de spawn
+                int index = Random.Range(0, obstaclePrefabs.Count);
+                GameObject obstacle = Instantiate(obstaclePrefabs[index], spawnPoints[i].transform.position, Quaternion.identity);
             }
         }
     }
