@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DeviceRotationController : MonoBehaviour
+public class GyroscopeMovement : MonoBehaviour
 {
     [Header("Speeds: ")]
     [SerializeField] private float _baseMovementSpeed = 10; //Velocidad base de movimiento en X
