@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI distanceText;
     [SerializeField] GameObject resultsScreen;
     [SerializeField] TextMeshProUGUI endGameText;
+    [SerializeField] AudioManager audioManager;
 
     //Metodo para actualizar el texto de la cuenta atras del inicio de la partida
     public void UpdateCountdown(string value)
@@ -39,6 +40,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 1; //Si el tiempo esta parado, lo reanudamos (puede estar parado por el fin de la partida o por juego pausado)
         SceneManager.LoadScene(id);
+        audioManager.ActualMusic.Stop();
     }
 
     public void ShowResultsScreen(string totalDistance)

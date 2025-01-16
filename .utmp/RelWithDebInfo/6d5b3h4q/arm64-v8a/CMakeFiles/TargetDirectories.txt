@@ -1,0 +1,5 @@
+C:/Programas/Github Projects/UnityAndroidGame/.utmp/RelWithDebInfo/6d5b3h4q/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Programas/Github Projects/UnityAndroidGame/.utmp/RelWithDebInfo/6d5b3h4q/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Programas/Github Projects/UnityAndroidGame/.utmp/RelWithDebInfo/6d5b3h4q/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Programas/Github Projects/UnityAndroidGame/.utmp/RelWithDebInfo/6d5b3h4q/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Programas/Github Projects/UnityAndroidGame/.utmp/RelWithDebInfo/6d5b3h4q/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
