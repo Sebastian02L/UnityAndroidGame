@@ -88,7 +88,7 @@ MonoBehaviour:
   uiBounds:
     serializedVersion: 2
     x: 1
-    y: -0
+    y: 0
     width: 474
     height: 1590
 --- !u!114 &114350483966675004
