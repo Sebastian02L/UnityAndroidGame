@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
 
                 //Escoge de forma aleatoria un obstaculo de la lista y lo instancia en el punto de spawn
                 int index = Random.Range(0, obstaclePrefabs.Count);
-                GameObject obstacle = Instantiate(obstaclePrefabs[index], spawnPoints[i].transform.position, Quaternion.identity);
+                GameObject obstacle = Instantiate(obstaclePrefabs[index], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
             }
         }
     }
