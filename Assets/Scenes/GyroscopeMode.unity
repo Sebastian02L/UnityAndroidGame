@@ -2794,7 +2794,7 @@ MonoBehaviour:
   spawnAreaDistance: 50
   spawnArea: {fileID: 487219368}
   obstaclePrefabs:
-  - {fileID: 832012905689228284, guid: 240e0dad92762ad4aacbac7ccf16f68e, type: 3}
+  - {fileID: 2668754415616298868, guid: 6af8b5e650b8445458825da3088af81e, type: 3}
   - {fileID: 6712413582409431248, guid: 15cede86aa2441b4290a061506c0f818, type: 3}
   - {fileID: 394626557928436916, guid: c399c3fe48a848549bf85364b006c0df, type: 3}
   - {fileID: 8047934510403359344, guid: f88d154396956a34a823887dae2fd7cb, type: 3}
