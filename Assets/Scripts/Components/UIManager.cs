@@ -45,6 +45,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowResultsScreen(string totalDistance)
     {
+
+        audioManager.PlayDeath();
         resultsScreen.SetActive(true);
         endGameText.text = totalDistance + "m";
     }
