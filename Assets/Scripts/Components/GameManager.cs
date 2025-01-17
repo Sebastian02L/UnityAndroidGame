@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
         gameStarted = false;
         UI.ShowResultsScreen(totalPlayerDistance.ToString("F0"));
         Time.timeScale = 0f;
+        PlayerDataManager.Instance.SetPoints((int)totalPlayerDistance);
     }
 
     void Update()
