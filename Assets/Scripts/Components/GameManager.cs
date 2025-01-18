@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float spawnAreaDistance; 
     [SerializeField] GameObject spawnArea;
     [SerializeField] List<GameObject> obstaclePrefabs;
+    [SerializeField] GameObject coinPrefab;
     float baseSpawnAreaDistance; 
     private float previousDistance; 
 
@@ -203,6 +204,10 @@ public class GameManager : MonoBehaviour
                 //Escoge de forma aleatoria un obstaculo de la lista y lo instancia en el punto de spawn
                 int index = Random.Range(0, obstaclePrefabs.Count);
                 GameObject obstacle = Instantiate(obstaclePrefabs[index], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
+            }
+            else
+            {
+                if (Random.Range(0, 10) == 0) Instantiate(coinPrefab, spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
             }
         }
     }

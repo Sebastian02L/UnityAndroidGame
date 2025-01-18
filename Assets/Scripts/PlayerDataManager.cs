@@ -51,6 +51,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public void SetPoints(int amount)
     {
+        if (MaxPoints > amount) return;
         MaxPoints = amount;
         PlayerPrefs.SetInt("points", MaxPoints);
         SaveData();

@@ -2802,6 +2802,7 @@ MonoBehaviour:
   - {fileID: 1822544836721628515, guid: 4928bd7b5cae5014bbd5eb0f584bb09b, type: 3}
   - {fileID: 6467103960318315542, guid: 17eb9f3a059f704478845a2a95909664, type: 3}
   - {fileID: 8787927457372939858, guid: ea72700e04983c04fb6d198b614379ca, type: 3}
+  coinPrefab: {fileID: 6001653288562552456, guid: 50781a65d0fa84c45b1c3df37ff9a35e, type: 3}
   spawnPoints:
   - {fileID: 1741659723}
   - {fileID: 2020937781}

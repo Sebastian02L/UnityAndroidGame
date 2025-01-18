@@ -5,6 +5,6 @@ public class PlayerCollisionComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.FindAnyObjectByType<GameManager>().EndGame();
+        if(!other.CompareTag("Coin")) GameObject.FindAnyObjectByType<GameManager>().EndGame();
     }
 }
