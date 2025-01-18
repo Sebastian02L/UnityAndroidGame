@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerDataManager : MonoBehaviour
 {
     public static PlayerDataManager Instance { get; private set; }
-    
+
     public int Coins { get; private set; } = 0;
     public int MaxPoints { get; private set; } = 0;
     public List<bool> Skins { get; private set; } = new List<bool>();
@@ -28,7 +28,7 @@ public class PlayerDataManager : MonoBehaviour
         MaxPoints = PlayerPrefs.GetInt("points", 0);
         ActiveSkin = PlayerPrefs.GetInt("activeSkin", 0);
         List<string> skinList = PlayerPrefs.GetString("skins", "true.false.false").Split(".").ToList();
-        foreach(string skin in skinList)
+        foreach (string skin in skinList)
         {
             Skins.Add(bool.Parse(skin));
         }
