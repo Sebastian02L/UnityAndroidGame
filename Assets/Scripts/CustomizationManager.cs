@@ -42,12 +42,12 @@ public class CustomizationManager : MonoBehaviour
             if (PlayerDataManager.Instance.ActiveSkin == _currentButton)
             {
                 equipButton.interactable = false;
-                equipButton.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Equipada";
+                equipButton.transform.GetComponentInChildren<TextMeshProUGUI>().text = "EQUIPPED";
             }
             else
             {
                 equipButton.interactable = true;
-                equipButton.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Equipar";
+                equipButton.transform.GetComponentInChildren<TextMeshProUGUI>().text = "EQUIP";
             }
         } 
         else
