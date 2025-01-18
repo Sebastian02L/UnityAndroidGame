@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7179174497906895983}
   - component: {fileID: 4370071056917729525}
   - component: {fileID: 1291146411672727380}
-  - component: {fileID: 293850976962876455}
+  - component: {fileID: 4223066374394469318}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -201,7 +201,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &293850976962876455
+--- !u!114 &4223066374394469318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,12 +210,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4078169128898066601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
+  m_Script: {fileID: 11500000, guid: 684143f4c44cb344db897526d1d31908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
-  _colorMult: {r: 1, g: 1, b: 1, a: 1}
-  _usesColorMult: 0
+  _textures:
+  - {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
+  - {fileID: 2800000, guid: 90961f37e413a944c9f3dfd200f4e741, type: 3}
+  - {fileID: 2800000, guid: d08725d7d2591b04e92d96e12a1f2952, type: 3}
 --- !u!1 &5521648121293238105
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +331,7 @@ GameObject:
   - component: {fileID: 8340952500379861352}
   - component: {fileID: 2160436883988405329}
   - component: {fileID: 4494004387062048908}
-  - component: {fileID: 4833353675270126824}
+  - component: {fileID: 1339684894814438453}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -406,7 +407,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4833353675270126824
+--- !u!114 &1339684894814438453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,9 +416,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6049152539825672778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
+  m_Script: {fileID: 11500000, guid: 684143f4c44cb344db897526d1d31908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
-  _colorMult: {r: 1, g: 1, b: 1, a: 1}
-  _usesColorMult: 0
+  _textures:
+  - {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
+  - {fileID: 2800000, guid: 90961f37e413a944c9f3dfd200f4e741, type: 3}
+  - {fileID: 2800000, guid: d08725d7d2591b04e92d96e12a1f2952, type: 3}

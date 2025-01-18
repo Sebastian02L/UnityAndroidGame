@@ -10,7 +10,7 @@ public class PlayerDataManager : MonoBehaviour
     
     public int Coins { get; private set; } = 0;
     public int MaxPoints { get; private set; } = 0;
-    public List<bool> Skins { get; private set; } = new List<bool>() { true, false, false, false};
+    public List<bool> Skins { get; private set; } = new List<bool>();
     public int ActiveSkin { get; private set; } = 0;
 
     private void Awake()
@@ -20,15 +20,14 @@ public class PlayerDataManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         CreateDataSystem();
-        Debug.Log(MaxPoints);
     }
 
     public void CreateDataSystem()
     {
-        Coins = PlayerPrefs.GetInt("coins", 0);
+        Coins = PlayerPrefs.GetInt("coins", 2000);
         MaxPoints = PlayerPrefs.GetInt("points", 0);
         ActiveSkin = PlayerPrefs.GetInt("activeSkin", 0);
-        List<string> skinList = PlayerPrefs.GetString("skins", "true.false.false.false").Split(".").ToList();
+        List<string> skinList = PlayerPrefs.GetString("skins", "true.false.false").Split(".").ToList();
         foreach(string skin in skinList)
         {
             Skins.Add(bool.Parse(skin));
@@ -57,9 +56,9 @@ public class PlayerDataManager : MonoBehaviour
         SaveData();
     }
 
-    public void SetSkins(List<bool> list)
+    public void SetSkins(int index, bool b)
     {
-        Skins = list;
+        Skins[index] = b;
         string joinedString = string.Join(".", Skins);
         PlayerPrefs.SetString("skins", joinedString);
         SaveData();

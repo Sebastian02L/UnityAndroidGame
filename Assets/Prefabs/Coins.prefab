@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7089288946257919092}
   - component: {fileID: 3434371087396655641}
   - component: {fileID: 8988423806240114691}
-  - component: {fileID: 3347372557380523812}
+  - component: {fileID: -8259019707405807906}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Coin
@@ -31,9 +31,9 @@ Transform:
   m_GameObject: {fileID: 6001653288562552456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 308.61, y: 63.402, z: -190.13}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 308.36, y: 63.558, z: -189.96}
+  m_LocalScale: {x: 0.22578901, y: 0.38353202, z: 0.259812}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: 1bd86cc9b3fed4a4899fd6861a069178, type: 3}
+  _texture: {fileID: 2800000, guid: 45c7ad9b579abf64ab1b859cffa6b889, type: 3}
   _colorMult: {r: 1, g: 1, b: 1, a: 1}
   _usesColorMult: 0
 --- !u!33 &3434371087396655641
@@ -87,7 +87,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6001653288562552456}
-  m_Mesh: {fileID: 3668326058412166403, guid: ed4e36ae2af1bf2449978a3d2e426cf3, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: bbd6995dfdb618148aa55a9c8d1500f4, type: 3}
 --- !u!23 &8988423806240114691
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,7 +112,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 30a46907222aba345a22e9e92fb3f159, type: 2}
-  - {fileID: 2100000, guid: c0a15035a887699458fff1e4dc09c443, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +133,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3347372557380523812
+--- !u!65 &-8259019707405807906
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,5 +152,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6926384, y: 2.5843372, z: 0.8233877}
-  m_Center: {x: 0.53346014, y: -0.41170815, z: -0.12517169}
+  m_Size: {x: 3.9804294, y: 2.5150416, z: 3.2556727}
+  m_Center: {x: -0.48538962, y: 0.1821812, z: 0.29955968}

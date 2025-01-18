@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 1175743218815960221}
   - {fileID: 1388898326780967251}
+  - {fileID: 5959908449285601845}
   m_Father: {fileID: 6701630388707268028}
   m_LocalEulerAnglesHint: {x: -19.826, y: 0, z: 0}
 --- !u!114 &1584404023461655674
@@ -441,6 +442,120 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &5890035136843506083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5959908449285601845}
+  - component: {fileID: 6943013366105030927}
+  - component: {fileID: 1295410589875682505}
+  m_Layer: 0
+  m_Name: Smoke
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5959908449285601845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890035136843506083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0033174604, y: -0, z: -0, w: 0.9999945}
+  m_LocalPosition: {x: -0.03, y: 0.4080024, z: 0.86299896}
+  m_LocalScale: {x: 1.3698599, y: 1.3698599, z: 1.3698599}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 444013001191875907}
+  m_LocalEulerAnglesHint: {x: -0.38, y: 0, z: 0}
+--- !u!2083052967 &6943013366105030927
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890035136843506083}
+  m_Enabled: 1
+  m_Asset: {fileID: 8926484042661614526, guid: c8b7db737b33ebe43baaacf37ff1ef79, type: 3}
+  m_InitialEventName: OnPlay
+  m_InitialEventNameOverriden: 0
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array: []
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array: []
+    m_Vector4f:
+      m_Array: []
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array: []
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array: []
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array: []
+    m_Bool:
+      m_Array: []
+--- !u!73398921 &1295410589875682505
+VFXRenderer:
+  serializedVersion: 1
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890035136843506083}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &6173236661003795029
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +567,7 @@ GameObject:
   - component: {fileID: 1175743218815960221}
   - component: {fileID: 6938398246624851007}
   - component: {fileID: 2930812879012991533}
-  - component: {fileID: 4426289005635250296}
+  - component: {fileID: 4617676601639554504}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -528,7 +643,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4426289005635250296
+--- !u!114 &4617676601639554504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,13 +652,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6173236661003795029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
+  m_Script: {fileID: 11500000, guid: 684143f4c44cb344db897526d1d31908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
-  _colorMult: {r: 1, g: 1, b: 1, a: 1}
-  _usesColorMult: 0
-  _outlineScale: 1.02
+  _textures:
+  - {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
+  - {fileID: 2800000, guid: 90961f37e413a944c9f3dfd200f4e741, type: 3}
+  - {fileID: 2800000, guid: d08725d7d2591b04e92d96e12a1f2952, type: 3}
 --- !u!1 &6429974072710091487
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +670,7 @@ GameObject:
   - component: {fileID: 6701630388707268028}
   m_Layer: 0
   m_Name: ARPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +970,7 @@ GameObject:
   - component: {fileID: 1388898326780967251}
   - component: {fileID: 6472865548261247496}
   - component: {fileID: 4882833279881512117}
-  - component: {fileID: 1189053807049670577}
+  - component: {fileID: 3420324210559073483}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -931,7 +1046,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1189053807049670577
+--- !u!114 &3420324210559073483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -940,13 +1055,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7262944369044351778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
+  m_Script: {fileID: 11500000, guid: 684143f4c44cb344db897526d1d31908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _texture: {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
-  _colorMult: {r: 1, g: 1, b: 1, a: 1}
-  _usesColorMult: 0
-  _outlineScale: 1.02
+  _textures:
+  - {fileID: 2800000, guid: fb292095a87df3b42ab1e4dece8b6443, type: 3}
+  - {fileID: 2800000, guid: 90961f37e413a944c9f3dfd200f4e741, type: 3}
+  - {fileID: 2800000, guid: d08725d7d2591b04e92d96e12a1f2952, type: 3}
 --- !u!1 &7582621645088168036
 GameObject:
   m_ObjectHideFlags: 0
