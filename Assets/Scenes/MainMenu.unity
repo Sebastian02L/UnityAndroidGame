@@ -1629,8 +1629,8 @@ MonoBehaviour:
   m_text: 'ROTATE THE DEVICE TO CONTROLL THE TRAIN!
 
 
-    A MINIMUM OF SKILL MUST
-    BE GRANTED.'
+    YOUR DEVICE MUST HAVE A
+    GYROSCOPE TO PLAY.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 873101d3af237ed49956dcf382677314, type: 2}
   m_sharedMaterial: {fileID: -4553886998699354323, guid: 873101d3af237ed49956dcf382677314, type: 2}
@@ -7255,6 +7255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421556230}
+  - component: {fileID: 1421556231}
   m_Layer: 5
   m_Name: MaxPointsInfo
   m_TagString: Untagged
@@ -7284,6 +7285,18 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -64}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1421556231
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421556229}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1433595552
 GameObject:
   m_ObjectHideFlags: 0
