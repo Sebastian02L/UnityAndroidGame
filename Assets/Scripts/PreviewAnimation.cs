@@ -5,11 +5,11 @@ public class PreviewAnimation : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 10f;
     [SerializeField] private float _displacementSpeed = 5f;
     [SerializeField] private float _maxOffset = 3f;
-    private Vector3 _startingPos;
+    private float initYPos;
 
-    private void Awake()
+    private void Start()
     {
-        _startingPos = transform.localPosition;
+        initYPos = transform.position.y;
     }
 
     void Update()
@@ -17,6 +17,6 @@ public class PreviewAnimation : MonoBehaviour
         transform.Rotate(0, _rotationSpeed * Time.deltaTime, 0);
 
         float offset = Mathf.Sin(Time.time * _displacementSpeed) * _maxOffset;
-        this.transform.localPosition = _startingPos + new Vector3(0, offset, 0);
+        transform.position = new Vector3(transform.position.x, initYPos + offset, transform.position.z);
     }
 }
