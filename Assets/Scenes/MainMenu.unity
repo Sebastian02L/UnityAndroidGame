@@ -8948,6 +8948,7 @@ GameObject:
   - component: {fileID: 1751658322}
   - component: {fileID: 1751658321}
   - component: {fileID: 1751658328}
+  - component: {fileID: 1751658329}
   m_Layer: 0
   m_Name: Coins (1)
   m_TagString: Coin
@@ -9102,6 +9103,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 763198241}
   offset: 0.78
+--- !u!114 &1751658329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751658320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12962a7da58ef984ebc9b1f69efe3fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1789439659
 GameObject:
   m_ObjectHideFlags: 0
