@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -13,7 +14,7 @@ public class Spawner : MonoBehaviour
     {
         float planeSize;
         // Obtén el hijo Plane del primer objeto para poder coger el size en z
-        Transform planeTransform = prefabs[0].transform.Find("Plane"); 
+        Transform planeTransform = prefabs[0].transform.Find("Plane");
 
         // Obtener el tamaño del Plane
         // Suponiendo que Plane tiene un componente Renderer
@@ -23,28 +24,29 @@ public class Spawner : MonoBehaviour
             //obtener size.z y asignarlo a la distancia de spawn
             planeSize = planeRenderer.bounds.size.z;
             Debug.Log("Tamaño del Plane: " + planeSize);
-            spawnDistance = planeSize /2;
+            spawnDistance = planeSize;
         }
         else
         {
             Debug.LogError("El objeto Plane no tiene un componente Renderer.");
         }
 
-        
+
     }
     void Update()
     {
         // Verificar si el jugador ha avanzado lo suficiente
-        if (player.position.z >= lastSpawnZ + spawnDistance)
+        if (player.position.z >= lastSpawnZ - 40)
         {
             SpawnObstacle();
+            Debug.Log("SPAWN");
         }
     }
 
     void SpawnObstacle()
     {
         // Seleccionar un prefab aleatorio
-        GameObject prefabToSpawn = prefabs[Random.Range(0, prefabs.Length)];
+        GameObject prefabToSpawn = prefabs[UnityEngine.Random.Range(0, prefabs.Length)];
 
         // Calcular la posición Z para el nuevo prefab
         float spawnZ = lastSpawnZ + spawnDistance;
@@ -61,7 +63,7 @@ public class Spawner : MonoBehaviour
     bool IsObstacleInRange(float spawnZ)
     {
         // Comprobar si hay obstáculos en la distancia de 20 unidades
-        Collider[] hitColliders = Physics.OverlapSphere(new Vector3(Xdistance, Ydistance, spawnZ), 10f);
+        Collider[] hitColliders = Physics.OverlapSphere(new Vector3(Xdistance, Ydistance, spawnZ), 50f);
         foreach (var hitCollider in hitColliders)
         {
             // Verificar si el objeto colisionado es un prefab de la lista
@@ -69,10 +71,12 @@ public class Spawner : MonoBehaviour
             {
                 if (hitCollider.gameObject.CompareTag(prefab.tag))
                 {
+                    Debug.Log("Hay obstaculo en rango ");
                     return true; // Hay un obstáculo en el rango
                 }
             }
         }
+        Debug.Log("No Hay obstaculo en rango ");
         return false; // No hay obstáculos en el rango
     }
 }
