@@ -1,11 +1,23 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource ActualMusic;
+    public AudioSource actualMusic;
     public AudioSource buttonSound;
     public AudioSource deathSound;
     public AudioSource coalSound;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+        SceneManager.sceneLoaded += OnSceneChanged;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneChanged;
+    }
 
     public void PlayButton()
     {
@@ -18,5 +30,11 @@ public class AudioManager : MonoBehaviour
     public void PlayCoal()
     {
         coalSound.Play();
+    }
+
+    private void OnSceneChanged(Scene scene, LoadSceneMode mode)
+    {
+        actualMusic.Stop();
+        Destroy(this.gameObject, 1);
     }
 }

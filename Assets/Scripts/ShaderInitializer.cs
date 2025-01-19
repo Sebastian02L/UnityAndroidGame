@@ -13,7 +13,7 @@ public class ShaderInitializer : MonoBehaviour
         //Se crean copias de los materiales personalizadas para este objeto
         _rend.material = new Material(_rend.material);
         //Se asignan las propiedades deseadas
-        _rend.material.SetTexture("_Texture", _texture);
+        if(_texture != null) _rend.material.SetTexture("_Texture", _texture);
         if(_usesColorMult) _rend.material.SetColor("_Color", _colorMult);
     }
 }
