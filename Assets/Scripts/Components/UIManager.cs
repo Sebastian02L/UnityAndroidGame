@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject resultsScreen;
     [SerializeField] TextMeshProUGUI endGameText;
     [SerializeField] AudioManager audioManager;
+    int distance = 0;
 
     //Metodo para actualizar el texto de la cuenta atras del inicio de la partida
     public void UpdateCountdown(string value)
@@ -24,14 +25,15 @@ public class UIManager : MonoBehaviour
     }
 
     //Metodo que actualiza la distancia recorrida por el jugador
-    public void UpdateDistance(string distance) 
+    public void UpdateDistance(int distance) 
     {
-        distanceText.text = "Distancia: " + distance + "m";
+        this.distance = distance;
+        distanceText.text = "DISTANCE: " + distance.ToString() + "m";
     }
 
     public void EnableEndGameText(string distance)
     {
-        endGameText.text = "Has recorrido " + distance + "m";
+        endGameText.text = distance + "m";
         distanceText.gameObject.SetActive(false);
     }
 
@@ -43,11 +45,14 @@ public class UIManager : MonoBehaviour
         audioManager.ActualMusic.Stop();
     }
 
-    public void ShowResultsScreen(string totalDistance)
+    public void ShowResultsScreen()
     {
-
-        audioManager.PlayDeath();
         resultsScreen.SetActive(true);
-        endGameText.text = totalDistance + "m";
+        endGameText.text = distance + "m";
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

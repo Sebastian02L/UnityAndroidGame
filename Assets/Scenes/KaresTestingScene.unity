@@ -515,18 +515,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1295410589875682505, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590526448628333085, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5890035136843506083, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6429974072710091487, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
       propertyPath: m_Name
       value: ARPlayer
@@ -570,10 +558,6 @@ PrefabInstance:
     - target: {fileID: 6701630388707268028, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609701680024639784, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
-      propertyPath: m_RendererIndex
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

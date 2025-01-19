@@ -83,10 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        //Debug.Log("Game Over");
-        gameStarted = false;
-        UI.ShowResultsScreen(totalPlayerDistance.ToString("F0"));
-        Time.timeScale = 0f;
+        UI.ShowResultsScreen();
         PlayerDataManager.Instance.SetPoints((int)totalPlayerDistance);
     }
 
@@ -148,7 +145,7 @@ public class GameManager : MonoBehaviour
         //Calculamos el vector entre el jugador y el punto de aparicion, su magnitud sera la distancia recorrida por el jugador
         Vector3 vector = groupGO.transform.position - startingPosition.transform.position;
         totalPlayerDistance = vector.magnitude;
-        UI.UpdateDistance(totalPlayerDistance.ToString("F0"));
+        UI.UpdateDistance((int)totalPlayerDistance);
     }
 
     //Metodo que determina los puntos libres del area de spawn
@@ -237,5 +234,10 @@ public class GameManager : MonoBehaviour
     public void PauseGame(bool value)
     {
         Time.timeScale = value ? 0f : 1f;
+    }
+
+    public void SetGameState(bool state)
+    {
+        gameStarted = state;
     }
 }
