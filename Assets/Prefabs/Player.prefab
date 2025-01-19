@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1103106533666048770}
   - component: {fileID: 6667110512670859961}
   - component: {fileID: 977557168826215035}
+  - component: {fileID: 2791140695554037272}
   m_Layer: 6
   m_Name: Smoke
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1797111213346547742}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0001, y: 0.3854, z: 0.638}
+  m_LocalPosition: {x: -0.000073, y: 0.386, z: 0.639}
   m_LocalScale: {x: 1.3698629, y: 1.3698629, z: 1.3698629}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +224,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4842,6 +4843,21 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2791140695554037272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797111213346547742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6595122c08e18ab4cbd6cefee830c747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _texture: {fileID: 0}
+  _colorMult: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 0}
+  _usesColorMult: 1
 --- !u!1 &4078169128898066601
 GameObject:
   m_ObjectHideFlags: 0

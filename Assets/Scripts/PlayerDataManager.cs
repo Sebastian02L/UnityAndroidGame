@@ -24,7 +24,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public void CreateDataSystem()
     {
-        Coins = PlayerPrefs.GetInt("coins", 2000);
+        Coins = PlayerPrefs.GetInt("coins", 0);
         MaxPoints = PlayerPrefs.GetInt("points", 0);
         ActiveSkin = PlayerPrefs.GetInt("activeSkin", 0);
         List<string> skinList = PlayerPrefs.GetString("skins", "true.false.false").Split(".").ToList();
