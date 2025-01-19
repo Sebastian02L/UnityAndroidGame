@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Coin
+  - Scene
   layers:
   - Default
   - TransparentFX

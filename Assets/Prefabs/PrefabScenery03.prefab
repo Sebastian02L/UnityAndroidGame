@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 8734429147391612837}
   m_Layer: 0
   m_Name: PrefabScenery03
-  m_TagString: Untagged
+  m_TagString: Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1056,7 +1056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f6d4aff45a33384ba90ea921716895a, type: 2}
+  - {fileID: 2100000, guid: e8ea2908c636d974795d0bbc2f407f54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1461,7 +1461,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f6d4aff45a33384ba90ea921716895a, type: 2}
+  - {fileID: 2100000, guid: e8ea2908c636d974795d0bbc2f407f54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
