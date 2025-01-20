@@ -1076,7 +1076,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 1159945705}
-  m_RendererIndex: 0
+  m_RendererIndex: 2
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -3905,7 +3905,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 1d9c44fe24c60eb478d5a81c70a2f5d6, type: 2}
   m_TargetDisplay: 0
@@ -5491,6 +5491,14 @@ PrefabInstance:
     - target: {fileID: 6701630388707268028, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7738879721607380466, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619546118468976547, guid: f4be4f63110275c4c8b564e2da35bbb7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

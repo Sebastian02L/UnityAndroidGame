@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 6938398246624851007}
   - component: {fileID: 2930812879012991533}
   - component: {fileID: 4617676601639554504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 6472865548261247496}
   - component: {fileID: 4882833279881512117}
   - component: {fileID: 3420324210559073483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Semaphore
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6c35f7c3e6b2a854b9517cdaf6c1e706, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
