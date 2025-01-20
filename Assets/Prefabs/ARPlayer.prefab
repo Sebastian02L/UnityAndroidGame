@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.17215268, y: -0, z: -0, w: 0.9850703}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1175743218815960221}
   - {fileID: 1388898326780967251}
@@ -56,7 +56,7 @@ MonoBehaviour:
   _baseMovementSpeed: 10
   _speedRotationInfluence: 1.5
   _maxRotation: 45
-  _boundsDistance: 3
+  _boundsDistance: 6.25
   _deadZoneValue: 5
 --- !u!54 &6547854894207752496
 Rigidbody:
@@ -104,7 +104,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.989537}
+  m_Size: {x: 0.72, y: 1, z: 1.989537}
   m_Center: {x: 0, y: 0.00000019371008, z: -0.08838127}
 --- !u!114 &6710767391350021161
 MonoBehaviour:
@@ -211,7 +211,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -50
   m_TargetDisplay: 0
 --- !u!114 &7644208117354285920
 MonoBehaviour:
@@ -353,9 +353,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4436715037696370898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 93}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -96.03999}
   m_SizeDelta: {x: 421.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1056433409506636372
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 2
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
