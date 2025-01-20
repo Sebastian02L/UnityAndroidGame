@@ -8,6 +8,7 @@ public class PlayerCollisionComponent : MonoBehaviour
     {
         if (!other.CompareTag("Coin"))
         {
+            GetComponent<Collider>().enabled = false;
             StartCoroutine(EndGame());
             _explosion.SetActive(true);
         }
