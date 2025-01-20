@@ -181,7 +181,15 @@ public class GameManager : MonoBehaviour
                     actualFreePoints.Add(index);
                     count++;
                 }
-            }
+                else
+                {
+                    int decision = Random.Range(0, 2);
+                    if (decision == 0)
+                    {
+                        actualFreePoints.Add(index);
+                        count++;
+                    }
+                }
             latestFreePoints = new List<int>(actualFreePoints);
         }
     }
