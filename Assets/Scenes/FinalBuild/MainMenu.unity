@@ -822,11 +822,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BE THE MACHINIST! POV MODE WITH 4 AXIS MOVEMENT.
+  m_text: 'BE THE MACHINIST! POV MODE WITH 4 DIRECTIONS MOVEMENT.
 
 
-    YOUR DEVICE MUST
-    HAVE GYROSCOPE SUPPORT.'
+    YOUR DEVICE
+    MUST HAVE GYROSCOPE SUPPORT.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 873101d3af237ed49956dcf382677314, type: 2}
   m_sharedMaterial: {fileID: -4553886998699354323, guid: 873101d3af237ed49956dcf382677314, type: 2}
@@ -4389,7 +4389,8 @@ MonoBehaviour:
   countDownText: {fileID: 0}
   distanceText: {fileID: 0}
   resultsScreen: {fileID: 0}
-  endGameText: {fileID: 0}
+  resultsDistanceText: {fileID: 0}
+  resultsCoinsText: {fileID: 0}
   audioManager: {fileID: 540681566}
 --- !u!4 &722323025
 Transform:

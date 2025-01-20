@@ -8,9 +8,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI countDownText;
     [SerializeField] TextMeshProUGUI distanceText;
     [SerializeField] GameObject resultsScreen;
-    [SerializeField] TextMeshProUGUI endGameText;
+    [SerializeField] TextMeshProUGUI resultsDistanceText;
+    [SerializeField] TextMeshProUGUI resultsCoinsText;
     [SerializeField] AudioManager audioManager;
     int distance = 0;
+    int coins = 0;
 
     //Metodo para actualizar el texto de la cuenta atras del inicio de la partida
     public void UpdateCountdown(string value)
@@ -31,9 +33,14 @@ public class UIManager : MonoBehaviour
         distanceText.text = "DISTANCE: " + distance.ToString() + "m";
     }
 
+    public void UpdateCoins(int coins)
+    {
+        this.coins += coins;
+    }
+
     public void EnableEndGameText(string distance)
     {
-        endGameText.text = distance + "m";
+        resultsDistanceText.text = distance + "m";
         distanceText.gameObject.SetActive(false);
     }
 
@@ -53,7 +60,8 @@ public class UIManager : MonoBehaviour
     public void ShowResultsScreen()
     {
         resultsScreen.SetActive(true);
-        endGameText.text = distance + "m";
+        resultsDistanceText.text = distance + "m";
+        resultsCoinsText.text = coins + "coins";
     }
 
     public void ExitGame()
