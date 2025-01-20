@@ -44,6 +44,12 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(id);
     }
 
+    public void ReloadScene()
+    {
+        Time.timeScale = Time.timeScale == 0 ? 1 : 1; //Si el tiempo esta parado, lo reanudamos (puede estar parado por el fin de la partida o por juego pausado)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void ShowResultsScreen()
     {
         resultsScreen.SetActive(true);
