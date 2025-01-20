@@ -190,7 +190,8 @@ public class GameManager : MonoBehaviour
                         count++;
                     }
                 }
-            latestFreePoints = new List<int>(actualFreePoints);
+                latestFreePoints = new List<int>(actualFreePoints);
+            }
         }
     }
 
