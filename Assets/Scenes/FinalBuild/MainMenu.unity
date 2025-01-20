@@ -822,11 +822,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BE THE MACHINIST! POV MODE WITH 4 DIRECTIONS MOVEMENT.
+  m_text: 'BE THE MACHINIST! POV MODE WITH 2 AXIS MOVEMENT.
 
 
-    YOUR DEVICE
-    MUST HAVE GYROSCOPE SUPPORT.'
+    YOUR DEVICE MUST
+    HAVE GYROSCOPE SUPPORT.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 873101d3af237ed49956dcf382677314, type: 2}
   m_sharedMaterial: {fileID: -4553886998699354323, guid: 873101d3af237ed49956dcf382677314, type: 2}
@@ -11134,10 +11134,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.5
-  m_fontSizeBase: 36
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0

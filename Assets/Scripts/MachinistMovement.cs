@@ -24,7 +24,9 @@ public class MachinistMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private float _rotationZ = 0; //Rotación almacenada en Z del movimiento del dispositivo
+    private float _zClamped = 0;
     private float _rotationX = 0; //Rotación almacenada en X del movimiento del dispositivo
+    private float _xClamped = 0;
 
     private void Awake()
     {
@@ -50,11 +52,11 @@ public class MachinistMovement : MonoBehaviour
         CheckCameraChange();
         if (!Input.gyro.enabled) return;
         _rotationZ += Input.gyro.rotationRateUnbiased.z * _rotationSpeed * Time.deltaTime;
-        _rotationZ = Mathf.Clamp(_rotationZ, -_maxRotation, _maxRotation);
+        _zClamped = Mathf.Clamp(_rotationZ, -_maxRotation, _maxRotation);
         _rotationX += -Input.gyro.rotationRateUnbiased.x * _rotationSpeed * Time.deltaTime;
-        _rotationX = Mathf.Clamp(_rotationX, -_maxRotation, _maxRotation);
+        _xClamped = Mathf.Clamp(_rotationX, -_maxRotation, _maxRotation);
         //Se aplica la rotación
-        transform.rotation = Quaternion.Euler(_rotationX, transform.rotation.eulerAngles.y, _rotationZ);
+        transform.rotation = Quaternion.Euler(_xClamped, transform.rotation.eulerAngles.y, _zClamped);
     }
 
     private void FixedUpdate() //Aquí se calcula el movimiento
@@ -63,17 +65,17 @@ public class MachinistMovement : MonoBehaviour
         float xSpeed = 0;
         float normalizedRotation;
         float speedMultiplier;
-        if (Mathf.Abs(_rotationZ) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
+        if (Mathf.Abs(_zClamped) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
         {
-            normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_rotationZ)); //La rotación se remapea a un valor entre 0 y 1
+            normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_zClamped)); //La rotación se remapea a un valor entre 0 y 1
             speedMultiplier = Mathf.Pow(normalizedRotation, 2) * _speedRotationInfluence; //el multiplicador de velocidad es exponencial, afectado por _speedRotationInfluence
-            xSpeed = -Mathf.Sign(_rotationZ) * _baseMovementSpeed * speedMultiplier;
+            xSpeed = -Mathf.Sign(_zClamped) * _baseMovementSpeed * speedMultiplier;
         }
-        if (Mathf.Abs(_rotationX) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
+        if (Mathf.Abs(_xClamped) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
         {
-            normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_rotationX)); //La rotación se remapea a un valor entre 0 y 1
+            normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_xClamped)); //La rotación se remapea a un valor entre 0 y 1
             speedMultiplier = Mathf.Pow(normalizedRotation, 2) * _speedRotationInfluence; //el multiplicador de velocidad es exponencial, afectado por _speedRotationInfluence
-            ySpeed = -Mathf.Sign(_rotationX) * _baseMovementSpeed * speedMultiplier;
+            ySpeed = -Mathf.Sign(_xClamped) * _baseMovementSpeed * speedMultiplier;
         }
         _rb.linearVelocity = new Vector3(xSpeed, ySpeed, 0);
         //Se controla que el jugador no se salga de los límites del mapa

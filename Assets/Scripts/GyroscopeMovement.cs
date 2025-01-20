@@ -14,6 +14,7 @@ public class GyroscopeMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private float _rotationZ = 0; //Rotación almacenada en Z del movimiento del dispositivo
+    private float _zClamped = 0; 
 
     private void Awake()
     {
@@ -31,18 +32,18 @@ public class GyroscopeMovement : MonoBehaviour
         if (!Input.gyro.enabled) return;
         //_rotationZ suma a sí misma la rotación del dispositivo en el eje Z y controla que el personaje no gire demasiado
         _rotationZ += Input.gyro.rotationRateUnbiased.z * _rotationSpeed * Time.deltaTime;
-        _rotationZ = Mathf.Clamp(_rotationZ, -_maxRotation, _maxRotation);
+        _zClamped = Mathf.Clamp(_rotationZ, -_maxRotation, _maxRotation);
         //Se aplica la rotación
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, _rotationZ);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, _zClamped);
     }
 
     private void FixedUpdate() //Aquí se calcula el movimiento
     {
-        if(Mathf.Abs(_rotationZ) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
+        if(Mathf.Abs(_zClamped) > _deadZoneValue) //Tiene que superar el umbral de _deadZoneValue para efectuar movimiento
         {
-            float normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_rotationZ)); //La rotación se remapea a un valor entre 0 y 1
+            float normalizedRotation = Mathf.InverseLerp(0, 45, Mathf.Abs(_zClamped)); //La rotación se remapea a un valor entre 0 y 1
             float speedMultiplier = Mathf.Pow(normalizedRotation, 2) * _speedRotationInfluence; //el multiplicador de velocidad es exponencial, afectado por _speedRotationInfluence
-            _rb.linearVelocity = new Vector3(-Mathf.Sign(_rotationZ) * _baseMovementSpeed * speedMultiplier, 0, 0); //Se aplica la velocidad linear
+            _rb.linearVelocity = new Vector3(-Mathf.Sign(_zClamped) * _baseMovementSpeed * speedMultiplier, 0, 0); //Se aplica la velocidad linear
         }
         else _rb.linearVelocity = Vector3.zero; //Si está en la dead zone no se mueve
         //Se controla que el jugador no se salga de los límites del mapa
